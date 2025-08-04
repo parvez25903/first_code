@@ -3,9 +3,581 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Md Parvez Ali Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+       
+    </style>
 </head>
-<body>
+<body class="relative">
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="fixed top-6 right-6 z-50 w-10 h-10 rounded-full bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center text-slate-700 dark:text-slate-200 transition-colors">
+        <i id="themeIcon" class="fas fa-moon"></i>
+    </button>
+     
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-40 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-slate-800 dark:text-white">MD<span class="text-primary"> Parvez</span></a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-slate-600 dark:text-slate-300">Home</a>
+                    <a href="#projects" class="nav-link text-slate-600 dark:text-slate-300">Projects</a>
+                    <a href="#skills" class="nav-link text-slate-600 dark:text-slate-300">Skills</a>
+                    <a href="#experience" class="nav-link text-slate-600 dark:text-slate-300">Experience</a>
+                    <a href="#contact" class="nav-link text-slate-600 dark:text-slate-300">Contact</a>
+                </div>
+                
+                <button id="mobileMenuBtn" class="md:hidden text-slate-700 dark:text-slate-200">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden fixed inset-0 bg-white dark:bg-slate-900 z-30 pt-20 px-6 transition-all">
+            <div class="flex flex-col space-y-6">
+                <a href="#home" class="nav-link-mobile text-xl text-slate-700 dark:text-slate-200 py-2">Home</a>
+                <a href="#projects" class="nav-link-mobile text-xl text-slate-700 dark:text-slate-200 py-2">Projects</a>
+                <a href="#skills" class="nav-link-mobile text-xl text-slate-700 dark:text-slate-200 py-2">Skills</a>
+                <a href="#experience" class="nav-link-mobile text-xl text-slate-700 dark:text-slate-200 py-2">Experience</a>
+                <a href="#contact" class="nav-link-mobile text-xl text-slate-700 dark:text-slate-200 py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
     
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen pt-32 px-6 flex items-center">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="mb-6">
+                    <span class="px-4 py-2 bg-primary/10 dark:bg-primary/20 text-primary rounded-full text-sm font-medium">UI/UX Developer</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Crafting <span class="text-primary">Beautiful</span> Digital Experiences</h1>
+                <p class="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-lg">I design and build intuitive user interfaces with clean code and pixel-perfect precision. With 5+ years of experience, I transform complex problems into elegant solutions.</p>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">View My Work</a>
+                    <a href="#contact" class="px-6 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-primary/10 transition-colors">Contact Me</a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="rounded-2xl overflow-hidden shadow-xl aspect-square max-w-md mx-auto">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/63cf972b-ea1e-4b00-b948-88f018694cd6.png" alt="UI developer working on a modern laptop with colorful interface design sketches visible on screen, surrounded by design inspiration" class="w-full h-full object-cover" />
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-slate-50 dark:bg-slate-800">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Featured <span class="text-primary">Projects</span></h2>
+                <p class="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">Explore a selection of my recent UI design and development projects. Each was carefully crafted to solve real user problems.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="card bg-white dark:bg-slate-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dd17b4e5-9206-47eb-a1d6-51ebd0f59214.png" alt="Modern e-commerce dashboard with clean product cards, interactive charts, and minimalist navigation" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold">E-Commerce Dashboard</h3>
+                            <span class="px-2 py-1 bg-primary/10 dark:bg-primary/20 text-primary text-xs rounded">2023</span>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-300 mb-4">A modern dashboard for store owners with analytics, inventory management, and order tracking.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-600 text-xs rounded">React</span>
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-600 text-xs rounded">Tailwind CSS</span>
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-600 text-xs rounded">D3.js</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="card bg-white dark:bg-slate-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/abf036c3-e19c-47e5-bd0a-44771860cc97.png" alt="Mobile app design for task management with vibrant color scheme and intuitive gesture-based interactions" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold">TaskFlow Mobile App</h3>
+                            <span class="px-2 py-1 bg-primary/10 dark:bg-primary/20 text-primary text-xs rounded">2023</span>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-300 mb-4">Gesture-based task management app with smart prioritization and team collaboration features.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-600 text-xs rounded">Figma</span>
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-600 text-xs rounded">React Native</span>
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-600 text-xs rounded">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="card bg-white dark:bg-slate-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8119c830-31d3-4b17-b01e-35c806bca877.png" alt="Interactive data visualization dashboard with 3D charts and real-time updates for financial analytics" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold">Financial Analytics</h3>
+                            <span class="px-2 py-1 bg-primary/10 dark:bg-primary/20 text-primary text-xs rounded">2022</span>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-300 mb-4">Interactive financial dashboard with real-time data visualization and forecasting tools.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-600 text-xs rounded">Vue.js</span>
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-600 text-xs rounded">Three.js</span>
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-600 text-xs rounded">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Technical <span class="text-primary">Skills</span></h2>
+                <p class="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">A blend of design sensibility and technical expertise to create seamless digital experiences.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Left Column -->
+                <div class="space-y-8">
+                    <!-- UI/UX Design -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">UI/UX Design</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm">User Research & Testing</span>
+                                    <span class="text-sm">90%</span>
+                                </div>
+                                <div class="skill-bar w-full bg-slate-200 dark:bg-slate-600 rounded-full">
+                                    <div class="skill-progress w-[90%]"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm">Wireframing & Prototyping</span>
+                                    <span class="text-sm">95%</span>
+                                </div>
+                                <div class="skill-bar w-full bg-slate-200 dark:bg-slate-600 rounded-full">
+                                    <div class="skill-progress w-[95%]"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm">Interaction Design</span>
+                                    <span class="text-sm">92%</span>
+                                </div>
+                                <div class="skill-bar w-full bg-slate-200 dark:bg-slate-600 rounded-full">
+                                    <div class="skill-progress w-[92%]"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tools -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Tools</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <div class="flex items-center space-x-2 px-3 py-2 bg-white dark:bg-slate-700 rounded-lg shadow-sm">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b9208118-af20-4dc7-87f2-7473822af79a.png" alt="Figma logo" class="w-6 h-6" />
+                                <span>Figma</span>
+                            </div>
+                            <div class="flex items-center space-x-2 px-3 py-2 bg-white dark:bg-slate-700 rounded-lg shadow-sm">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8a3178ca-2152-4347-ad27-f1a1655f8734.png" alt="Adobe XD logo" class="w-6 h-6" />
+                                <span>Adobe XD</span>
+                            </div>
+                            <div class="flex items-center space-x-2 px-3 py-2 bg-white dark:bg-slate-700 rounded-lg shadow-sm">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9e705073-08f6-4fc8-b50f-67c1a9ec2d70.png" alt="Sketch logo" class="w-6 h-6" />
+                                <span>Sketch</span>
+                            </div>
+                            <div class="flex items-center space-x-2 px-3 py-2 bg-white dark:bg-slate-700 rounded-lg shadow-sm">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fa03e980-9d16-42f1-a672-1c7debd52ec9.png" alt="Photoshop logo" class="w-6 h-6" />
+                                <span>Photoshop</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column -->
+                <div class="space-y-8">
+                    <!-- Development -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Development</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm">HTML/CSS</span>
+                                    <span class="text-sm">98%</span>
+                                </div>
+                                <div class="skill-bar w-full bg-slate-200 dark:bg-slate-600 rounded-full">
+                                    <div class="skill-progress w-[98%]"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm">JavaScript</span>
+                                    <span class="text-sm">90%</span>
+                                </div>
+                                <div class="skill-bar w-full bg-slate-200 dark:bg-slate-600 rounded-full">
+                                    <div class="skill-progress w-[90%]"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm">React</span>
+                                    <span class="text-sm">85%</span>
+                                </div>
+                                <div class="skill-bar w-full bg-slate-200 dark:bg-slate-600 rounded-full">
+                                    <div class="skill-progress w-[85%]"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm">Responsive Design</span>
+                                    <span class="text-sm">95%</span>
+                                </div>
+                                <div class="skill-bar w-full bg-slate-200 dark:bg-slate-600 rounded-full">
+                                    <div class="skill-progress w-[95%]"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Frameworks -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Frameworks</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <div class="flex items-center space-x-2 px-3 py-2 bg-white dark:bg-slate-700 rounded-lg shadow-sm">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3a0f88a4-9549-47e8-81e2-7a6ac2f3cf61.png" alt="Tailwind CSS logo" class="w-6 h-6" />
+                                <span>Tailwind CSS</span>
+                            </div>
+                            <div class="flex items-center space-x-2 px-3 py-2 bg-white dark:bg-slate-700 rounded-lg shadow-sm">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e6acdc8c-3446-471e-9d25-623597080122.png" alt="Bootstrap logo" class="w-6 h-6" />
+                                <span>Bootstrap</span>
+                            </div>
+                            <div class="flex items-center space-x-2 px-3 py-2 bg-white dark:bg-slate-700 rounded-lg shadow-sm">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e2851e96-0abd-4f89-82c6-96034e2b0b0f.png" alt="React logo" class="w-6 h-6" />
+                                <span>React</span>
+                            </div>
+                            <div class="flex items-center space-x-2 px-3 py-2 bg-white dark:bg-slate-700 rounded-lg shadow-sm">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/90315723-ee73-4084-9f98-ccd21bc3bfd4.png" alt="Vue.js logo" class="w-6 h-6" />
+                                <span>Vue.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-6 bg-slate-50 dark:bg-slate-800">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Work <span class="text-primary">Experience</span></h2>
+                <p class="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">My professional journey through the years, working with amazing teams and clients.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto relative">
+                <!-- Timeline connector -->
+                <div class="absolute left-8 top-0 h-full w-0.5 bg-slate-200 dark:bg-slate-600 -z-10"></div>
+                
+                <!-- Experience 1 -->
+                <div class="relative pl-16 pb-12">
+                    <div class="timeline-item">
+                        <div class="bg-white dark:bg-slate-700 rounded-xl shadow-md p-6">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-xl font-bold mb-1">Senior UI Developer</h3>
+                                    <p class="text-primary font-medium mb-2">TechVision</p>
+                                </div>
+                                <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary text-xs rounded-full">2020 - Present</span>
+                            </div>
+                            <p class="text-slate-600 dark:text-slate-300 mb-3">Leading UI development for enterprise web applications, establishing design systems, and mentoring junior developers.</p>
+                            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                                <li class="flex items-start space-x-2">
+                                    <i class="fas fa-check text-primary mt-1"></i>
+                                    <span>Built scalable design system used by 30+ products</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <i class="fas fa-check text-primary mt-1"></i>
+                                    <span>Reduced development time by 40% through component library</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <i class="fas fa-check text-primary mt-1"></i>
+                                    <span>Mentored 5 junior developers in UI best practices</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 2 -->
+                <div class="relative pl-16 pb-12">
+                    <div class="timeline-item">
+                        <div class="bg-white dark:bg-slate-700 rounded-xl shadow-md p-6">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-xl font-bold mb-1">UI Designer & Developer</h3>
+                                    <p class="text-primary font-medium mb-2">CreativeMinds</p>
+                                </div>
+                                <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary text-xs rounded-full">2018 - 2020</span>
+                            </div>
+                            <p class="text-slate-600 dark:text-slate-300 mb-3">Designed and implemented user interfaces for client projects across various industries.</p>
+                            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                                <li class="flex items-start space-x-2">
+                                    <i class="fas fa-check text-primary mt-1"></i>
+                                    <span>Delivered 50+ client projects with 95% satisfaction rate</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <i class="fas fa-check text-primary mt-1"></i>
+                                    <span>Introduced mobile-first design approach company-wide</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <i class="fas fa-check text-primary mt-1"></i>
+                                    <span>Developed reusable UI components library</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 3 -->
+                <div class="relative pl-16">
+                    <div class="timeline-item">
+                        <div class="bg-white dark:bg-slate-700 rounded-xl shadow-md p-6">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-xl font-bold mb-1">Junior UI Developer</h3>
+                                    <p class="text-primary font-medium mb-2">DigiSolutions</p>
+                                </div>
+                                <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary text-xs rounded-full">2016 - 2018</span>
+                            </div>
+                            <p class="text-slate-600 dark:text-slate-300 mb-3">Implemented designs and developed interactive UI components under supervision.</p>
+                            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                                <li class="flex items-start space-x-2">
+                                    <i class="fas fa-check text-primary mt-1"></i>
+                                    <span>Translated 100+ design mockups to functional UI</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <i class="fas fa-check text-primary mt-1"></i>
+                                    <span>Improved website performance by 35%</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <i class="fas fa-check text-primary mt-1"></i>
+                                    <span>Learned modern CSS techniques and JavaScript frameworks</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Get In <span class="text-primary">Touch</span></h2>
+                <p class="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <div class="space-y-4 text-slate-600 dark:text-slate-300">
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-envelope text-primary mt-1"></i>
+                            <span>parveztarek4@gmail.com</span>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-phone-alt text-primary mt-1"></i>
+                            <span>+880 1843469489</span>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+                            <span>Chapai Nawabganj,Rajshahi, Bangladesh</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold mb-4">Social Links</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://web.facebook.com/mdparvezali.piz" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-primary hover:text-white transition-colors">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-primary hover:text-white transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-primary hover:text-white transition-colors">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-primary hover:text-white transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-1">Your Name</label>
+                            <input type="text" id="name" class="contact-input w-full px-4 py-2 border border-slate-200 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 focus:outline-none" placeholder="Sagor Khan">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-1">Email Address</label>
+                            <input type="email" id="email" class="contact-input w-full px-4 py-2 border border-slate-200 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 focus:outline-none" placeholder="sagorkhan123@example.com">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium mb-1">Subject</label>
+                            <input type="text" id="subject" class="contact-input w-full px-4 py-2 border border-slate-200 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 focus:outline-none" placeholder="Project Inquiry">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-1">Message</label>
+                            <textarea id="message" rows="5" class="contact-input w-full px-4 py-2 border border-slate-200 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 focus:outline-none" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-8 bg-slate-50 dark:bg-slate-800 text-center">
+        <div class="max-w-6xl mx-auto px-6">
+            <p class="text-slate-600 dark:text-slate-300">© <span id="currentYear"></span> UI Developer Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // Dark/Light theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        // Set initial theme
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && prefersDark)) {
+            document.body.classList.add('dark');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+        
+        // Toggle theme
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            if (document.body.classList.contains('dark')) {
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-link-mobile').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Animate skill bars when scrolling to skills section
+        const animateSkills = () => {
+            const skillsSection = document.getElementById('skills');
+            const skillBars = document.querySelectorAll('.skill-progress');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        skillBars.forEach(bar => {
+                            bar.style.width = bar.parentElement.previousElementSibling.lastElementChild.textContent;
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            observer.observe(skillsSection);
+        };
+        
+        // Run animations when page loads
+        window.addEventListener('load', animateSkills);
+        
+        // Form submission
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Simple validation
+            if (!name || !email || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // In a real implementation, you would send this data to a server
+            console.log('Form submitted:', { name, email, subject, message });
+            
+            // Show success message
+            alert('Thank you for your message! I will get back to you soon.');
+            form.reset();
+        });
+    </script>
 </body>
 </html>
+
