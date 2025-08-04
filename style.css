@@ -1,0 +1,88 @@
+ :root {
+            --primary: #6366f1;
+            --primary-light: #818cf8;
+            --dark: #1e293b;
+            --light: #f1f5f9;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            transition: var(--transition);
+        }
+        
+        body.dark {
+            background-color: #0f172a;
+            color: var(--light);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            bottom: -2px;
+            left: 0;
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .card {
+            transition: var(--transition);
+            transform: translateY(0);
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .skill-bar {
+            height: 6px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+            border-radius: 4px;
+            animation: fillAnimation 1.5s ease-out forwards;
+        }
+        
+        @keyframes fillAnimation {
+            from { width: 0; }
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--primary);
+            left: -8px;
+            top: 0;
+        }
+        
+        .contact-input {
+            transition: var(--transition);
+        }
+        
+        .contact-input:focus {
+            box-shadow: 0 0 0 2px var(--primary-light);
+        }
